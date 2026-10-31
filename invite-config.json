@@ -9,6 +9,7 @@
       "en": "The Wedding of Vijay & Gayathri",
       "sec": "విజయ్ & గాయత్రి వివాహం"
     },
+    "site_url": "https://manaahvanam.github.io/weddinginvite01/",
     "description": {
       "en": "A celebration of love, family, laughter, and a beautiful new beginning.",
       "sec": "ప్రేమ, కుటుంబ బంధం, సంతోషపు నవ్వులు—విజయ్ & గాయత్రి కొత్త ప్రయాణం మొదలయ్యే పండుగకు మాతో కలిసి రండి."
@@ -332,6 +333,16 @@
     "body_line_height": 1.65
   },
   "media_assets": {
+    "share_preview": {
+      "local_path": "assets/images/whatsapp-preview.png",
+      "public_url": "",
+      "alt_text": {
+        "en": "Vijay and Gayathri wedding invitation preview",
+        "sec": "విజయ్ మరియు గాయత్రి వివాహ ఆహ్వాన ప్రివ్యూ"
+      },
+      "width": 2848,
+      "height": 1504
+    },
     "hero_image": {
       "local_path": "assets/images/hero-couple.png",
       "public_url": "",

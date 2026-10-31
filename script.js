@@ -49,6 +49,71 @@ function getAssetUrl(asset) {
   return asset?.public_url || asset?.local_path || "";
 }
 
+function setMetaTag(selector, attribute, value) {
+  let element = document.head.querySelector(selector);
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(attribute.startsWith("name=") ? "name" : "property",
+      attribute.split("=")[1]);
+    document.head.append(element);
+  }
+  element.setAttribute("content", value);
+}
+
+function applyShareMetadata() {
+  const metadata = config?.metadata;
+  if (!metadata) return;
+
+  const preview = config?.media_assets?.share_preview;
+  const title = getLocalizedText(metadata.title);
+  const description = getLocalizedText(metadata.description);
+  const siteUrl = metadata.site_url || window.location.href.split("#")[0].split("?")[0];
+  let imageUrl = getAssetUrl(preview);
+
+  if (imageUrl && !/^https?:\/\//i.test(imageUrl) && metadata.site_url) {
+    imageUrl = new URL(imageUrl, metadata.site_url).href;
+  }
+
+  let canonical = document.head.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.append(canonical);
+  }
+  canonical.href = siteUrl;
+
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content",
+    config?.theme_colors?.background || "#FFF9F3");
+  setMetaTag('meta[property="og:type"]', "property=og:type", "website");
+  setMetaTag('meta[property="og:title"]', "property=og:title", title);
+  setMetaTag('meta[property="og:description"]', "property=og:description", description);
+  setMetaTag('meta[property="og:url"]', "property=og:url", siteUrl);
+  setMetaTag('meta[property="og:locale"]', "property=og:locale",
+    currentLanguage === "sec" ? "te_IN" : "en_IN");
+  setMetaTag('meta[property="og:locale:alternate"]', "property=og:locale:alternate",
+    currentLanguage === "sec" ? "en_IN" : "te_IN");
+
+  if (imageUrl) {
+    setMetaTag('meta[property="og:image"]', "property=og:image", imageUrl);
+    setMetaTag('meta[property="og:image:width"]', "property=og:image:width",
+      String(preview?.width || 2848));
+    setMetaTag('meta[property="og:image:height"]', "property=og:image:height",
+      String(preview?.height || 1504));
+    setMetaTag('meta[property="og:image:alt"]', "property=og:image:alt",
+      getLocalizedText(preview?.alt_text));
+  }
+
+  setMetaTag('meta[name="description"]', "name=description", description);
+  setMetaTag('meta[name="twitter:card"]', "name=twitter:card", "summary_large_image");
+  setMetaTag('meta[name="twitter:title"]', "name=twitter:title", title);
+  setMetaTag('meta[name="twitter:description"]', "name=twitter:description", description);
+  if (imageUrl) {
+    setMetaTag('meta[name="twitter:image"]', "name=twitter:image", imageUrl);
+    setMetaTag('meta[name="twitter:image:alt"]', "name=twitter:image:alt",
+      getLocalizedText(preview?.alt_text));
+  }
+}
+
 function renderHero() {
   const heroImage = document.getElementById("hero-image");
   const image = config?.media_assets?.hero_image;
@@ -242,6 +307,7 @@ function render() {
     document.title = getLocalizedText(config.metadata.title);
   }
 
+  applyShareMetadata();
   applyThemeColors();
   renderHero();
   renderTimeline();
@@ -319,4 +385,3 @@ window.addEventListener("load", () => {
 loadConfig().finally(() => {
   requestAnimationFrame(setupScrollAnimations);
 });
-
