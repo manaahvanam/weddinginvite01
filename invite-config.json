@@ -1,0 +1,652 @@
+{
+  "config_version": "1.0",
+  "invite_type": {
+    "en": "Wedding Invitation",
+    "sec": "విజయ్–గాయత్రి వివాహ ఆహ్వానం"
+  },
+  "metadata": {
+    "title": {
+      "en": "The Wedding of Vijay & Gayathri",
+      "sec": "విజయ్ & గాయత్రి వివాహం"
+    },
+    "description": {
+      "en": "A celebration of love, family, laughter, and a beautiful new beginning.",
+      "sec": "ప్రేమ, కుటుంబ బంధం, సంతోషపు నవ్వులు—విజయ్ & గాయత్రి కొత్త ప్రయాణం మొదలయ్యే పండుగకు మాతో కలిసి రండి."
+    },
+    "keywords": {
+      "en": [
+        "wedding",
+        "Vijay",
+        "Gayathri",
+        "Hyderabad",
+        "celebration"
+      ],
+      "sec": [
+        "వివాహం",
+        "విజయ్",
+        "గాయత్రి",
+        "హైదరాబాద్",
+        "వేడుక"
+      ]
+    }
+  },
+  "couple": {
+    "bride": {
+      "name": {
+        "en": "Gayathri",
+        "sec": "గాయత్రి"
+      },
+      "short_name": {
+        "en": "Gayathri",
+        "sec": "గాయత్రి"
+      },
+      "pronouns": {
+        "en": "she/her",
+        "sec": "ఆమె/ఆమె"
+      },
+      "bio": {
+        "en": "The heart of every plan, an excellent cook, and the only person who can make Vijay arrive on time.",
+        "sec": "ప్రతి ప్రణాళికలో హృదయం, వంటలో దిట్ట, విజయ్‌ని టైమ్‌కు సిద్ధం చేయగల బుద్ధిమతి!"
+      },
+      "family": {
+        "label": {
+          "en": "Daughter of",
+          "sec": "కుమార్తె"
+        },
+        "parents": {
+          "en": "Mr. & Mrs. Reddy",
+          "sec": "శ్రీ & శ్రీమతి రెడ్డి"
+        }
+      }
+    },
+    "groom": {
+      "name": {
+        "en": "Vijay",
+        "sec": "విజయ్"
+      },
+      "short_name": {
+        "en": "Vijay",
+        "sec": "విజయ్"
+      },
+      "pronouns": {
+        "en": "he/him",
+        "sec": "అతను/అతడు"
+      },
+      "bio": {
+        "en": "A dependable partner, Hyderabad foodie, and a learner who now knows Gayathri is usually right.",
+        "sec": "నమ్మదగిన తోడు, హైదరాబాదీ ఆహారాల ప్రియుడు—గాయత్రి చెప్పినదే సరిగ్గా ఉంటుందని ఇప్పుడు నేర్చుకున్నాడు."
+      },
+      "family": {
+        "label": {
+          "en": "Son of",
+          "sec": "కుమారుడు"
+        },
+        "parents": {
+          "en": "Mr. & Mrs. Rao",
+          "sec": "శ్రీ & శ్రీమతి రావు"
+        }
+      }
+    },
+    "display_style": {
+      "en": "Vijay & Gayathri",
+      "sec": "విజయ్ & గాయత్రి"
+    }
+  },
+  "celebration": {
+    "eyebrow": {
+      "en": "Together with our families",
+      "sec": "మా కుటుంబాల ఆశీర్వాదంతో"
+    },
+    "headline": {
+      "en": "We are getting married",
+      "sec": "ఇద్దరం కలుసుకున్నాం… ఇప్పుడు పెళ్లి చేసుకుందాం!"
+    },
+    "message": {
+      "en": "Come celebrate our happily-ever-after—with Hyderabad biryani, plenty of laughter, and our favorite people.",
+      "sec": "హైదరాబాదీ బిర్యానీతో, నవ్వుల వర్షంతో, మన స్నేహితులూ కుటుంబాలూ కలిసి జరుపుకుందాం."
+    },
+    "hashtag": {
+      "en": "#VijayWedsGayathri",
+      "sec": "#VijayWedsGayathri"
+    },
+    "date": {
+      "en": "Sunday, 14 February 2027",
+      "sec": "ఆదివారం, 14 ఫిబ్రవరి 2027"
+    },
+    "timezone": {
+      "en": "India Standard Time (IST)",
+      "sec": "భారతదేశ ప్రామాణిక సమయం (IST)"
+    }
+  },
+  "event_schedule": [
+    {
+      "id": "mehendi",
+      "name": {
+        "en": "Mehendi & High Tea",
+        "sec": "మెహందీ, ఫ్రెండ్‌లు & హై టీ"
+      },
+      "description": {
+        "en": "Henna, snacks, family stories, and Vijay holding every tea cup.",
+        "sec": "గోరింట, టిఫిన్‌లు, కుటుంబ కథలు—విజయ్ మాత్రం టీ కప్పులన్నీ పట్టుకునే పెద్ద ఉద్యోగం ఇచ్చారు."
+      },
+      "date": {
+        "en": "Friday, 12 February 2027",
+        "sec": "శుక్రవారం, 12 ఫిబ్రవరి 2027"
+      },
+      "start_time": "14:00",
+      "end_time": "17:30",
+      "timezone": {
+        "en": "IST",
+        "sec": "IST"
+      },
+      "location": {
+        "venue_name": {
+          "en": "Gayathri House",
+          "sec": "గాయత్రి ఇల్లు"
+        },
+        "address": {
+          "en": "12 Lotus Colony, Jubilee Hills, Hyderabad, Telangana 500033",
+          "sec": "12 లోటస్ కాలనీ, జూబ్లీ హిల్స్, హైదరాబాద్, తెలంగాణ 500033"
+        },
+        "city": {
+          "en": "Hyderabad",
+          "sec": "హైదరాబాద్"
+        },
+        "country": {
+          "en": "India",
+          "sec": "భారతదేశం"
+        },
+        "map_url": "https://www.google.com/maps/search/?api=1&query=12%20Lotus%20Colony%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033",
+        "latitude": 17.4326,
+        "longitude": 78.4071
+      },
+      "dress_code": {
+        "en": "Pastels and traditional florals",
+        "sec": "పాస్టెల్స్ మరియు సాంప్రదాయ పుష్పాలు"
+      }
+    },
+    {
+      "id": "haldi",
+      "name": {
+        "en": "Haldi Morning",
+        "sec": "పసుపు పూసుకునే పండుగ"
+      },
+      "description": {
+        "en": "A cheerful turmeric morning where staying clean is officially impossible.",
+        "sec": "పసుపు రంగు తప్పించుకున్న వారెవ్వరూ లేరు—ఇక్కడ బట్టలు మలిచుకోవడమే పెద్ద పనైపోయింది."
+      },
+      "date": {
+        "en": "Friday, 12 February 2027",
+        "sec": "శుక్రవారం, 12 ఫిబ్రవరి 2027"
+      },
+      "start_time": "09:30",
+      "end_time": "11:30",
+      "timezone": {
+        "en": "IST",
+        "sec": "IST"
+      },
+      "location": {
+        "venue_name": {
+          "en": "Vijay House",
+          "sec": "విజయ్ ఇల్లు"
+        },
+        "address": {
+          "en": "18 Lotus Avenue, Banjara Hills, Hyderabad, Telangana 500034",
+          "sec": "18 లోటస్ అవెన్యూ, బంజారాహిల్స్, హైదరాబాద్, తెలంగాణ 500034"
+        },
+        "city": {
+          "en": "Hyderabad",
+          "sec": "హైదరాబాద్"
+        },
+        "country": {
+          "en": "India",
+          "sec": "భారతదేశం"
+        },
+        "map_url": "https://www.google.com/maps/search/?api=1&query=18%20Lotus%20Avenue%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500034",
+        "latitude": 17.4126,
+        "longitude": 78.4482
+      },
+      "dress_code": {
+        "en": "Yellow and comfortable whites",
+        "sec": "పసుపు మరియు సౌకర్యవంతమైన శ్వేతజాతీయులు"
+      }
+    },
+    {
+      "id": "sangeet",
+      "name": {
+        "en": "Sangeet Night",
+        "sec": "సంగీతం, స్టెప్పులు & ఫ్యామిలీ జోక్స్"
+      },
+      "description": {
+        "en": "Music, dance, family competitions, and Vijay pretending he rehearsed.",
+        "sec": "పాటలు, డాన్స్, కుటుంబాల మధ్య సరసమైన పోటీలు—విజయ్ ప్రాక్టీస్ చేశాడని చెప్పి డాన్స్‌లో కంగారు పడుతున్నాడు!"
+      },
+      "date": {
+        "en": "Saturday, 13 February 2027",
+        "sec": "శనివారం, 13 ఫిబ్రవరి 2027"
+      },
+      "start_time": "18:30",
+      "end_time": "22:30",
+      "timezone": {
+        "en": "IST",
+        "sec": "IST"
+      },
+      "location": {
+        "venue_name": {
+          "en": "The Royal Orchid Ballroom",
+          "sec": "రాయల్ ఆర్కిడ్ బాల్రూమ్"
+        },
+        "address": {
+          "en": "ITC Kohenur, Madhapur, Hyderabad, Telangana 500081",
+          "sec": "ఐటీసీ కోహెనూర్, మాదాపూర్, హైదరాబాద్, తెలంగాణ 500081"
+        },
+        "city": {
+          "en": "Hyderabad",
+          "sec": "హైదరాబాద్"
+        },
+        "country": {
+          "en": "India",
+          "sec": "భారతదేశం"
+        },
+        "map_url": "https://www.google.com/maps/search/?api=1&query=ITC%20Kohenur%2C%20Madhapur%2C%20Hyderabad%2C%20Telangana%20500081",
+        "latitude": 17.4177,
+        "longitude": 78.4216,
+        "dress_code": {
+          "en": "Cocktail festive; jewel tones encouraged",
+          "sec": "కాక్టెయిల్ పండుగ వేషధారణ—రంగుల వర్షం బాగుంటుంది"
+        }
+      },
+      "dress_code": {
+        "en": "Cocktail festive; jewel tones encouraged",
+        "sec": "కాక్టెయిల్ పండుగ; ఆభరణాల టోన్లు ప్రోత్సహించబడ్డాయి"
+      }
+    },
+    {
+      "id": "wedding",
+      "name": {
+        "en": "Wedding Ceremony",
+        "sec": "విజయ్ & గాయత్రి వివాహ మహోత్సవం"
+      },
+      "description": {
+        "en": "The sacred ceremony, warm blessings, happy tears, and one official new family group chat.",
+        "sec": "పవిత్ర ముహూర్తం, ఆశీర్వాదాలు, ఆనంద కన్నీళ్లు—ఇంకొక అధికారిక ఫ్యామిలీ గ్రూపు కూడా వచ్చేస్తుంది."
+      },
+      "date": {
+        "en": "Sunday, 14 February 2027",
+        "sec": "ఆదివారం, 14 ఫిబ్రవరి 2027"
+      },
+      "start_time": "10:00",
+      "end_time": "14:00",
+      "timezone": {
+        "en": "IST",
+        "sec": "IST"
+      },
+      "location": {
+        "venue_name": {
+          "en": "Hyderabad International Convention Centre",
+          "sec": "హైదరాబాద్ ఇంటర్నేషనల్ కన్వెన్షన్ సెంటర్"
+        },
+        "address": {
+          "en": "HITEC City, Kondapur, Hyderabad, Telangana 500081",
+          "sec": "హైటెక్ సిటీ, కొండాపూర్, హైదరాబాద్, తెలంగాణ 500081"
+        },
+        "city": {
+          "en": "Hyderabad",
+          "sec": "హైదరాబాద్"
+        },
+        "country": {
+          "en": "India",
+          "sec": "భారతదేశం"
+        },
+        "map_url": "https://www.google.com/maps/search/?api=1&query=HITEC%20City%2C%20Kondapur%2C%20Hyderabad%2C%20Telangana%20500081",
+        "latitude": 17.3806,
+        "longitude": 78.3397,
+        "dress_code": {
+          "en": "Traditional Indian festive attire",
+          "sec": "పండుగకు సరిపోయే భారతీయ దుస్తులు—సౌకర్యంగా ఉంటే చాలు"
+        }
+      },
+      "dress_code": {
+        "en": "Traditional Indian festive attire",
+        "sec": "పండుగకు సరిపోయే భారతీయ దుస్తులు—సౌకర్యంగా ఉంటే చాలు"
+      }
+    }
+  ],
+  "theme_colors": {
+    "primary": "#7A1F2B",
+    "secondary": "#C9A96E",
+    "background": "#FFF9F3",
+    "surface": "#FFFFFF",
+    "text": "#2D2420",
+    "muted_text": "#786A62",
+    "accent": "#E8D4AE",
+    "success": "#557A46",
+    "error": "#B33A3A"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Inter",
+    "secondary_language_font": "Noto Serif Telugu",
+    "base_font_size_px": 16,
+    "heading_line_height": 1.15,
+    "body_line_height": 1.65
+  },
+  "media_assets": {
+    "hero_image": {
+      "local_path": "assets/images/hero-couple.png",
+      "public_url": "",
+      "alt_text": {
+        "en": "Vijay and Gayathri walking together",
+        "sec": "విజయ్ మరియు గాయత్రి కలిసి నడుస్తున్నారు"
+      },
+      "width": 1920,
+      "height": 1280
+    },
+    "couple_portrait": {
+      "local_path": "assets/images/couple-portrait.png",
+      "public_url": "",
+      "alt_text": {
+        "en": "Portrait of Vijay and Gayathri",
+        "sec": "విజయ్ మరియు గాయత్రి చిత్రం"
+      },
+      "width": 1200,
+      "height": 1500
+    },
+    "gallery": [
+      {
+        "id": "proposal",
+        "local_path": "assets/images/gallery-proposal.png",
+        "public_url": "",
+        "alt_text": {
+          "en": "Vijay proposing to Gayathri",
+          "sec": "గాయత్రికి విజయ్ ప్రేమను తెలిపిన చిత్రం"
+        }
+      },
+      {
+        "id": "engagement",
+        "local_path": "assets/images/gallery-engagement.png",
+        "public_url": "",
+        "alt_text": {
+          "en": "Vijay and Gayathri at their engagement celebration",
+          "sec": "నిశ్చితార్థ వేడుకలో విజయ్ మరియు గాయత్రి"
+        }
+      },
+      {
+        "id": "family",
+        "local_path": "assets/images/gallery-family.png",
+        "public_url": "",
+        "alt_text": {
+          "en": "The couple with their families",
+          "sec": "విజయ్, గాయత్రి మరియు కుటుంబ సభ్యులు"
+        }
+      }
+    ],
+    "invitation_seal": {
+      "local_path": "assets/images/seal.png",
+      "public_url": "",
+      "alt_text": {
+        "en": "Vijay and Gayathri wedding seal",
+        "sec": "విజయ్ మరియు గాయత్రి వివాహ ముద్ర"
+      }
+    },
+    "background_music": {
+      "local_path": "assets/audio/wedding-theme.mp3",
+      "public_url": "https://example.com/assets/audio/wedding-theme.mp3",
+      "title": {
+        "en": "Wedding Theme",
+        "sec": "వివాహ థీమ్"
+      },
+      "autoplay": false,
+      "loop": true
+    }
+  },
+  "story": {
+    "section_title": {
+      "en": "Our Story",
+      "sec": "మా ప్రేమకథ"
+    },
+    "timeline": [
+      {
+        "id": "first-meeting",
+        "year": 2018,
+        "title": {
+          "en": "A meeting that became a habit",
+          "sec": "ఒక్క పరిచయం… తర్వాత దినచర్య"
+        },
+        "description": {
+          "en": "One planned coffee meeting turned into an endless conversation.",
+          "sec": "కాఫీ తాగడానికి కలిసింది ఇద్దరి కథ—కట్ చేస్తే సాయంత్రం అయిపోయింది!"
+        }
+      },
+      {
+        "id": "first-date",
+        "year": 2019,
+        "title": {
+          "en": "The first date met Hyderabad traffic",
+          "sec": "మొదటి డేట్‌లో హైదరాబాద్ ట్రాఫిక్ స్పీచ్"
+        },
+        "description": {
+          "en": "Hyderabad traffic made Vijay late; Gayathri made him remember the lesson forever.",
+          "sec": "హైదరాబాద్ ట్రాఫిక్ వల్ల విజయ్ లేట్—గాయత్రి మాత్రం “ఇలా జరగదు” అని జీవితాంతం గుర్తుండే పాఠం నేర్పింది."
+        }
+      },
+      {
+        "id": "proposal",
+        "year": 2026,
+        "title": {
+          "en": "The easiest yes",
+          "sec": "గాయత్రి చెప్పిన ఒక్క “అవును”"
+        },
+        "description": {
+          "en": "Vijay asked the big question, and Gayathri said yes before checking the menu.",
+          "sec": "విజయ్ పెళ్లి అడగగానే గాయత్రి “అవును” అన్నది—ఇంకా విందు మెనూ చూడకుండా!"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "section_title": {
+      "en": "Contact",
+      "sec": "సంప్రదించండి"
+    },
+    "wedding_email": "hello@vijayandgayathri.example",
+    "phone": "+91 98765 43210",
+    "whatsapp_url": "https://wa.me/919876543210",
+    "contacts": [
+      {
+        "role": {
+          "en": "Bride's Family",
+          "sec": "గాయత్రి కుటుంబం"
+        },
+        "name": {
+          "en": "Anita Reddy",
+          "sec": "అనితా రెడ్డి"
+        },
+        "email": "anita.reddy@example.com"
+      },
+      {
+        "role": {
+          "en": "Groom's Family",
+          "sec": "విజయ్ కుటుంబం"
+        },
+        "name": {
+          "en": "Rajiv Rao",
+          "sec": "రాజీవ్ రావు"
+        },
+        "email": "rajiv.rao@example.com"
+      }
+    ]
+  },
+  "travel": {
+    "section_title": {
+      "en": "Travel & Stay",
+      "sec": "చేరుకోవడం ఎలా?"
+    },
+    "intro": {
+      "en": "Hyderabad directions, comfortable stays, and enough time for a coffee break.",
+      "sec": "హైదరాబాద్ దారులు, సుఖమైన బసలు—కాఫీ బ్రేక్‌కూ సమయం ఉంచాం!"
+    },
+    "airport": {
+      "name": {
+        "en": "Rajiv Gandhi International Airport",
+        "sec": "రాజీవ్ గాంధీ అంతర్జాతీయ విమానాశ్రయం"
+      },
+      "code": "HYD",
+      "address": {
+        "en": "Shamshabad, Hyderabad, Telangana 501218",
+        "sec": "శంషాబాద్, హైదరాబాద్, తెలంగాణ 501218"
+      },
+      "estimated_transfer": {
+        "en": "45–60 minutes to the hotel",
+        "sec": "హోటల్‌కు దాదాపు 45–60 నిమిషాలు"
+      }
+    },
+    "recommended_hotels": [
+      {
+        "id": "taj-krishna",
+        "name": {
+          "en": "Taj Krishna",
+          "sec": "తాజ్ కృష్ణ"
+        },
+        "address": {
+          "en": "Road No. 1, Banjara Hills, Hyderabad",
+          "sec": "రోడ్ నెం. 1, బంజారాహిల్స్, హైదరాబాద్"
+        },
+        "booking_url": "https://example.com/hotels/taj-krishna",
+        "distance_to_venue": {
+          "en": "25 minutes from the wedding venue",
+          "sec": "వివాహ వేదిక నుండి 25 నిమిషాలు"
+        }
+      },
+      {
+        "id": "itc-kakatiya",
+        "name": {
+          "en": "ITC Kakatiya",
+          "sec": "ఐటీసీ కాకతీయ"
+        },
+        "address": {
+          "en": "Begumpet, Hyderabad",
+          "sec": "బేగంపేట్, హైదరాబాద్"
+        },
+        "booking_url": "https://example.com/hotels/itc-kakatiya",
+        "distance_to_venue": {
+          "en": "30 minutes from the wedding venue",
+          "sec": "వివాహ వేదిక నుండి 30 నిమిషాలు"
+        }
+      }
+    ],
+    "transport_note": {
+      "en": "Wedding transportation will be arranged from the recommended hotels; details will be shared by 1 February 2027.",
+      "sec": "సిఫార్సు చేయబడిన హోటళ్ల నుండి వివాహ రవాణా ఏర్పాటు చేయబడుతుంది; వివరాలు 1 ఫిబ్రవరి 2027 నాటికి షేర్ చేయబడతాయి."
+    }
+  },
+  "faqs": [
+    {
+      "question": {
+        "en": "What events are part of the wedding celebration?",
+        "sec": "పెళ్లి వేడుకల్లో ఏ కార్యక్రమాలు ఉన్నాయి?"
+      },
+      "answer": {
+        "en": "Mehendi & High Tea, Haldi Morning, Sangeet Night, and the Wedding Ceremony—with music, laughter, and one happy couple guaranteed!",
+        "sec": "మెహందీ & హై టీ, పసుపు వేడుక, సంగీత సాయంత్రం, వివాహ మహోత్సవం—ఆడుటా పాడుటా నవ్వుల పండుగే, కంగ్రాట్స్ విజయ్–గాయత్రికి!"
+      }
+    },
+    {
+      "question": {
+        "en": "What should we bring as a gift?",
+        "sec": "బహుమతి ఏం తీసుకురావాలి?"
+      },
+      "answer": {
+        "en": "Your presence is the best gift. Blessings and smiles are more than enough.",
+        "sec": "మీ presence చాలు—ఆశీర్వాదం, చిరునవ్వు, మంచి ఫోటో మూడు తో సరిపోతాయి!"
+      }
+    },
+    {
+      "question": {
+        "en": "Can we take photographs during the ceremony?",
+        "sec": "ముహూర్తం సమయంలో ఫోటోలు తీసుకోవచ్చా?"
+      },
+      "answer": {
+        "en": "Please stay offline until the vows are complete; our photographer has the memories covered.",
+        "sec": "ముహూర్తం అయ్యే వరకు ఫోన్ మ్యూట్ చేయండి—ఫోటోలు తీశే ఉద్యోగం మన ఫోటోగ్రాఫర్‌కు అప్పగించాం!"
+      }
+    }
+  ],
+  "footer": {
+    "copyright": {
+      "en": "With love, Vijay & Gayathri",
+      "sec": "ప్రేమతో, విజయ్ & గాయత్రి"
+    },
+    "privacy_label": {
+      "en": "Privacy",
+      "sec": "గోప్యత"
+    },
+    "privacy_url": "https://example.com/privacy",
+    "social_links": {
+      "instagram": "https://instagram.com/vijayandgayathri",
+      "facebook": "https://facebook.com/vijayandgayathri"
+    }
+  },
+  "language": {
+    "default": "en",
+    "secondary": "sec",
+    "language_names": {
+      "en": {
+        "en": "English",
+        "sec": "ఇంగ్లీష్"
+      },
+      "sec": {
+        "en": "Telugu",
+        "sec": "తెలుగు"
+      }
+    },
+    "switcher_label": {
+      "en": "Change language",
+      "sec": "భాషను మార్చండి"
+    }
+  },
+  "feature_flags": {
+    "show_story": true,
+    "show_gallery": true,
+    "show_travel": true,
+    "show_faqs": true,
+    "enable_music": true,
+    "enable_countdown": true,
+    "enable_map_links": true
+  },
+  "locations": {
+    "bride_house": {
+      "name": {
+        "en": "Gayathri House",
+        "sec": "గాయత్రి ఇల్లు"
+      },
+      "address": {
+        "en": "12 Lotus Colony, Jubilee Hills, Hyderabad, Telangana 500033",
+        "sec": "12 లోటస్ కాలనీ, జూబ్లీ హిల్స్, హైదరాబాద్, తెలంగాణ 500033"
+      },
+      "map_url": "https://www.google.com/maps/search/?api=1&query=12%20Lotus%20Colony%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033"
+    },
+    "groom_house": {
+      "name": {
+        "en": "Vijay House",
+        "sec": "విజయ్ ఇల్లు"
+      },
+      "address": {
+        "en": "18 Lotus Avenue, Banjara Hills, Hyderabad, Telangana 500034",
+        "sec": "18 లోటస్ అవెన్యూ, బంజారాహిల్స్, హైదరాబాద్, తెలంగాణ 500034"
+      },
+      "map_url": "https://www.google.com/maps/search/?api=1&query=18%20Lotus%20Avenue%2C%20Banjara%20Hills%2C%20Hyderabad%2C%20Telangana%20500034"
+    },
+    "wedding_hall": {
+      "name": {
+        "en": "Hyderabad International Convention Centre",
+        "sec": "హైదరాబాద్ ఇంటర్నేషనల్ కన్వెన్షన్ సెంటర్"
+      },
+      "address": {
+        "en": "HITEC City, Kondapur, Hyderabad, Telangana 500081",
+        "sec": "హైటెక్ సిటీ, కొండాపూర్, హైదరాబాద్, తెలంగాణ 500081"
+      },
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Hyderabad%20International%20Convention%20Centre%2C%20HITEC%20City%2C%20Kondapur%2C%20Hyderabad%2C%20Telangana%20500081"
+    }
+  }
+}

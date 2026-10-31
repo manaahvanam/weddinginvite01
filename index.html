@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#FFF9F3" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&family=Noto+Serif+Telugu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #7a1f2b;
+        --secondary: #c9a96e;
+        --background: #fff9f3;
+        --surface: #ffffff;
+        --text: #2d2420;
+        --muted: #786a62;
+        --accent: #e8d4ae;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        min-width: 320px;
+        background: var(--background);
+        color: var(--text);
+        font-family: Inter, system-ui, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      button,
+      a {
+        font: inherit;
+      }
+      a {
+        color: inherit;
+      }
+
+      .preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background: var(--background);
+        transition:
+          opacity 0.55s ease,
+          visibility 0.55s ease;
+      }
+      .preloader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .preloader-mark {
+        width: 52px;
+        aspect-ratio: 1;
+        border: 1px solid var(--secondary);
+        border-radius: 50%;
+        animation: pulse 1.4s ease-in-out infinite;
+        position: relative;
+      }
+      .preloader-mark::after {
+        content: "";
+        position: absolute;
+        inset: 7px;
+        border-radius: inherit;
+        border: 1px solid var(--primary);
+      }
+      @keyframes pulse {
+        50% {
+          transform: scale(0.88);
+          opacity: 0.55;
+        }
+      }
+
+      .language-toggle {
+        position: fixed;
+        right: 14px;
+        bottom: calc(14px + env(safe-area-inset-bottom));
+        z-index: 1000;
+        min-width: 116px;
+        height: 48px;
+        padding: 5px 6px;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: 999px;
+        background: rgba(122, 31, 43, 0.94);
+        color: #fff;
+        box-shadow: 0 12px 35px rgba(45, 36, 32, 0.22);
+        backdrop-filter: blur(14px);
+        cursor: pointer;
+        letter-spacing: 0.08em;
+        font-weight: 600;
+        font-size: 11px;
+      }
+      .language-toggle .divider {
+        opacity: 0.55;
+        margin: 0 5px;
+      }
+
+      .hero {
+        min-height: 100svh;
+        display: grid;
+        align-items: end;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: var(--primary);
+        color: #fff;
+      }
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+      }
+      .hero-media img {
+        filter: saturate(0.82) contrast(0.96);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(
+          180deg,
+          rgba(20, 12, 10, 0.08),
+          rgba(20, 12, 10, 0.68)
+        );
+      }
+      .hero-content {
+        width: min(100% - 40px, 900px);
+        margin-inline: auto;
+        padding: 42vh 0 52px;
+        text-align: center;
+      }
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.24em;
+        font-size: 10px;
+        font-weight: 600;
+      }
+      .hero h1,
+      h2 {
+        font-family: "Cormorant Garamond", serif;
+      }
+      .hero h1 {
+        max-width: 820px;
+        margin: 12px auto;
+        font-size: clamp(46px, 14vw, 96px);
+        font-weight: 500;
+        line-height: 0.92;
+        text-wrap: balance;
+      }
+      .hero-date {
+        margin-top: 20px;
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      section {
+        padding: 76px 20px;
+      }
+      .container {
+        width: min(100%, 1120px);
+        margin-inline: auto;
+      }
+      .section-heading {
+        max-width: 720px;
+        margin-bottom: 36px;
+      }
+      .section-heading.center {
+        margin-inline: auto;
+        text-align: center;
+      }
+      .section-heading h2 {
+        margin: 8px 0 12px;
+        font-size: clamp(38px, 10vw, 68px);
+        line-height: 1;
+        font-weight: 500;
+      }
+      .section-heading p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .couple-grid {
+        display: grid;
+        gap: 24px;
+      }
+      .person-card {
+        border-top: 1px solid
+          color-mix(in srgb, var(--secondary) 55%, transparent);
+        padding-top: 24px;
+      }
+      .person-card h3 {
+        margin: 0 0 6px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(32px, 9vw, 48px);
+        line-height: 1;
+        font-weight: 500;
+      }
+      .person-card .family {
+        color: var(--secondary);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+      }
+      .person-card p {
+        color: var(--muted);
+      }
+
+      .story {
+        background: var(--surface);
+      }
+      .timeline {
+        display: grid;
+        gap: 0;
+      }
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 16px;
+        border-top: 1px solid
+          color-mix(in srgb, var(--secondary) 38%, transparent);
+        padding: 24px 0;
+      }
+      .timeline-year {
+        color: var(--secondary);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+      }
+      .timeline-item h3 {
+        margin: 0 0 5px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 28px;
+        line-height: 1.1;
+      }
+      .timeline-item p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .schedule-grid {
+        display: grid;
+        gap: 14px;
+      }
+      .event-card {
+        background: var(--surface);
+        border: 1px solid color-mix(in srgb, var(--secondary) 28%, transparent);
+        padding: 24px;
+        box-shadow: 0 12px 35px rgba(45, 36, 32, 0.05);
+      }
+      .event-card h3 {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 34px;
+        line-height: 1;
+      }
+      .event-card .event-date,
+      .event-card .event-time {
+        margin-top: 10px;
+        color: var(--primary);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .event-card .event-description {
+        color: var(--muted);
+      }
+      .venue {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid
+          color-mix(in srgb, var(--secondary) 25%, transparent);
+      }
+      .venue strong {
+        display: block;
+      }
+      .map-link {
+        display: inline-block;
+        margin-top: 12px;
+        color: var(--primary);
+        font-size: 12px;
+        text-decoration: none;
+        border-bottom: 1px solid var(--secondary);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .gallery-grid figure {
+        margin: 0;
+        aspect-ratio: 3/4;
+        overflow: hidden;
+      }
+      .gallery-grid figure:first-child {
+        grid-column: 1 / -1;
+        aspect-ratio: 4/3;
+      }
+
+      .travel-grid,
+      .faq-list {
+        display: grid;
+        gap: 16px;
+      }
+      .travel-card,
+      details {
+        border-top: 1px solid
+          color-mix(in srgb, var(--secondary) 45%, transparent);
+        padding-top: 18px;
+      }
+      details {
+        cursor: pointer;
+      }
+      summary {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+      }
+      details p {
+        color: var(--muted);
+      }
+
+      footer {
+        text-align: center;
+        padding: 44px 20px 90px;
+        color: var(--muted);
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      @media (min-width: 700px) {
+        section {
+          padding: 110px 32px;
+        }
+        .language-toggle {
+          right: 24px;
+          bottom: 24px;
+        }
+        .couple-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 64px;
+        }
+        .schedule-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .gallery-grid figure:first-child {
+          grid-column: auto;
+          aspect-ratio: 3/4;
+        }
+        .travel-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .hero-content {
+          padding-bottom: 72px;
+        }
+        .schedule-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .preloader-mark {
+          animation: none;
+        }
+      }
+
+      html[lang="sec"] {
+        font-family: "Noto Serif Telugu", "Noto Sans Telugu", serif;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div id="preloader" class="preloader" role="status" aria-live="polite">
+      <div class="preloader-mark" aria-hidden="true"></div>
+    </div>
+
+    <header class="hero" aria-labelledby="hero-title">
+      <figure class="hero-media" aria-label="">
+        <img id="hero-image" src="" alt="" />
+      </figure>
+      <div class="hero-content">
+        <div class="eyebrow" data-key="celebration.eyebrow"></div>
+        <h1 id="hero-title"><span data-key="couple.display_style"></span></h1>
+        <div class="hero-date" data-key="celebration.date"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="invitation" aria-labelledby="invitation-title">
+        <div class="container">
+          <div class="section-heading center">
+            <p class="eyebrow" data-key="celebration.timezone"></p>
+            <h2 id="invitation-title" data-key="celebration.headline"></h2>
+            <p data-key="celebration.message"></p>
+          </div>
+          <div class="couple-grid">
+            <article class="person-card">
+              <div class="family">
+                <span data-key="couple.bride.family.label"></span>
+                <span data-key="couple.bride.family.parents"></span>
+              </div>
+              <h3 data-key="couple.bride.name"></h3>
+              <p data-key="couple.bride.bio"></p>
+            </article>
+            <article class="person-card">
+              <div class="family">
+                <span data-key="couple.groom.family.label"></span>
+                <span data-key="couple.groom.family.parents"></span>
+              </div>
+              <h3 data-key="couple.groom.name"></h3>
+              <p data-key="couple.groom.bio"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" aria-labelledby="story-title">
+        <div class="container">
+          <div class="section-heading center">
+            <h2 id="story-title" data-key="story.section_title"></h2>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </div>
+      </section>
+
+      <section class="schedule">
+        <div class="container">
+          <div id="event-schedule" class="schedule-grid"></div>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="">
+        <div class="container">
+          <div id="gallery-grid" class="gallery-grid"></div>
+        </div>
+      </section>
+
+      <section class="travel" aria-labelledby="travel-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="travel-title" data-key="travel.section_title"></h2>
+            <p data-key="travel.intro"></p>
+          </div>
+          <div id="travel-grid" class="travel-grid"></div>
+        </div>
+      </section>
+
+      <section class="faqs">
+        <div class="container">
+          <div id="faq-list" class="faq-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div data-key="footer.copyright"></div>
+    </footer>
+
+    <button
+      id="language-toggle"
+      class="language-toggle"
+      type="button"
+      aria-label=""
+    >
+      <span id="language-en">EN</span><span class="divider">/</span
+      ><span id="language-sec"></span>
+    </button>
+
+    <script type="text/plain" id="legacy-inline-script">
+      (() => {
+        let config;
+        let currentLanguage = 'en';
+
+        const getPath = (source, path) => path.split('.').reduce((value, key) => value?.[key], source);
+        const isBilingual = value => value && typeof value === 'object' && 'en' in value && 'sec' in value;
+        const text = value => isBilingual(value) ? (value[currentLanguage] ?? value.en ?? '') : (value ?? '');
+
+        const assetUrl = asset => asset?.public_url || asset?.local_path || '';
+
+        function applyTheme() {
+          const colors = config.theme_colors || {};
+          const root = document.documentElement;
+          const map = {
+            '--primary': colors.primary,
+            '--secondary': colors.secondary,
+            '--background': colors.background,
+            '--surface': colors.surface,
+            '--text': colors.text,
+            '--muted': colors.muted_text
+          };
+          Object.entries(map).forEach(([property, value]) => value && root.style.setProperty(property, value));
+          if (colors.background) document.querySelector('meta[name="theme-color"]')?.setAttribute('content', colors.background);
+        }
+
+        function renderStaticText() {
+          document.querySelectorAll('[data-key]').forEach(element => {
+            const value = getPath(config, element.dataset.key);
+            if (isBilingual(value)) element.textContent = text(value);
+          });
+        }
+
+        function renderMetadata() {
+          document.title = text(config.metadata?.title) || '';
+          document.documentElement.lang = currentLanguage;
+          document.querySelector('meta[name="description"]')?.setAttribute('content', text(config.metadata?.description) || '');
+        }
+
+        function renderHero() {
+          const image = config.media_assets?.hero_image;
+          const heroImage = document.getElementById('hero-image');
+          heroImage.src = assetUrl(image);
+          heroImage.alt = text(image?.alt_text) || '';
+        }
+
+        function renderTimeline() {
+          const container = document.getElementById('timeline');
+          container.replaceChildren(...(config.story?.timeline || []).map(item => {
+            const article = document.createElement('article');
+            article.className = 'timeline-item';
+            article.innerHTML = '<div class="timeline-year"></div><div><h3></h3><p></p></div>';
+            article.querySelector('.timeline-year').textContent = String(item.year ?? '');
+            article.querySelector('h3').textContent = text(item.title);
+            article.querySelector('p').textContent = text(item.description);
+            return article;
+          }));
+        }
+
+        function renderSchedule() {
+          const container = document.getElementById('event-schedule');
+          container.replaceChildren(...(config.event_schedule || []).map(event => {
+            const article = document.createElement('article');
+            article.className = 'event-card';
+            const venue = event.location || {};
+            const mapLink = venue.map_url ? `<a class="map-link" href="${venue.map_url}" target="_blank" rel="noopener noreferrer"></a>` : '';
+            article.innerHTML = '<h3></h3><div class="event-date"></div><div class="event-time"></div><p class="event-description"></p><div class="venue"><strong></strong><div></div><div class="dress-code"></div></div>' + mapLink;
+            article.querySelector('h3').textContent = text(event.name);
+            article.querySelector('.event-date').textContent = text(event.date);
+            article.querySelector('.event-time').textContent = `${event.start_time || ''}${event.end_time ? ` – ${event.end_time}` : ''}`;
+            article.querySelector('.event-description').textContent = text(event.description);
+            article.querySelector('.venue strong').textContent = text(venue.venue_name);
+            article.querySelector('.venue > div').textContent = text(venue.address);
+            article.querySelector('.dress-code').textContent = text(event.dress_code);
+            const link = article.querySelector('.map-link');
+            if (link) {
+              const label = currentLanguage === 'sec'
+                ? 'Google మ్యాప్స్‌లో చిరునామా చూడండి'
+                : 'View address on Google Maps';
+              link.textContent = label;
+              link.setAttribute('aria-label', label);
+            }
+            return article;
+          }));
+        }
+
+        function renderGallery() {
+          const gallery = document.getElementById('gallery-grid');
+          gallery.replaceChildren(...(config.media_assets?.gallery || []).map((item, index) => {
+            const figure = document.createElement('figure');
+            const image = document.createElement('img');
+            image.src = assetUrl(item);
+            image.alt = text(item.alt_text) || '';
+            image.loading = index === 0 ? 'eager' : 'lazy';
+            figure.append(image);
+            return figure;
+          }));
+        }
+
+        function renderTravel() {
+          const container = document.getElementById('travel-grid');
+          const airport = config.travel?.airport;
+          const cards = [];
+          if (airport) {
+            const card = document.createElement('article');
+            card.className = 'travel-card';
+            card.innerHTML = '<strong></strong><div></div><div></div><div></div>';
+            card.children[0].textContent = text(airport.name);
+            card.children[1].textContent = airport.code || '';
+            card.children[2].textContent = text(airport.address);
+            card.children[3].textContent = text(airport.estimated_transfer);
+            cards.push(card);
+          }
+          (config.travel?.recommended_hotels || []).forEach(hotel => {
+            const card = document.createElement('article');
+            card.className = 'travel-card';
+            card.innerHTML = '<strong></strong><div></div><div></div>';
+            card.children[0].textContent = text(hotel.name);
+            card.children[1].textContent = text(hotel.address);
+            card.children[2].textContent = text(hotel.distance_to_venue);
+            if (hotel.booking_url) {
+              const link = document.createElement('a');
+              link.href = hotel.booking_url;
+              link.target = '_blank';
+              link.rel = 'noopener';
+              link.className = 'map-link';
+              link.setAttribute('aria-label', hotel.booking_url);
+              card.append(link);
+            }
+            cards.push(card);
+          });
+          container.replaceChildren(...cards);
+        }
+
+        function renderFaqs() {
+          const container = document.getElementById('faq-list');
+          container.replaceChildren(...(config.faqs || []).map(faq => {
+            const details = document.createElement('details');
+            const summary = document.createElement('summary');
+            const answer = document.createElement('p');
+            summary.textContent = text(faq.question);
+            answer.textContent = text(faq.answer);
+            details.append(summary, answer);
+            return details;
+          }));
+        }
+
+        function renderLanguageToggle() {
+          document.getElementById('language-en').textContent = text(config.language?.language_names?.en?.en) === 'English' ? 'EN' : text(config.language?.language_names?.en?.en) || 'EN';
+          document.getElementById('language-sec').textContent = currentLanguage === 'en'
+            ? text(config.language?.language_names?.sec) || config.language?.secondary?.toUpperCase() || 'LANG 2'
+            : text(config.language?.language_names?.en) || 'EN';
+          document.getElementById('language-toggle').setAttribute('aria-label', text(config.language?.switcher_label) || '');
+        }
+
+        function renderAll() {
+          applyTheme();
+          renderMetadata();
+          renderStaticText();
+          renderHero();
+          renderTimeline();
+          renderSchedule();
+          renderGallery();
+          renderTravel();
+          renderFaqs();
+          renderLanguageToggle();
+        }
+
+        async function loadConfig() {
+          const response = await fetch('./invite-config.json', { cache: 'no-store' });
+          if (!response.ok) throw new Error(`Unable to load invitation configuration: ${response.status}`);
+          config = await response.json();
+          const savedLanguage = localStorage.getItem('invite-language');
+          currentLanguage = savedLanguage === 'sec' ? 'sec' : (config.language?.default === 'sec' ? 'sec' : 'en');
+
+          renderAll();
+          await Promise.all(Array.from(document.images).map(image => image.src ? new Promise(resolve => {
+            if (image.complete) resolve();
+            else { image.addEventListener('load', resolve, { once: true }); image.addEventListener('error', resolve, { once: true }); }
+          }) : Promise.resolve()));
+          document.getElementById('preloader').classList.add('is-hidden');
+        }
+
+        document.getElementById('language-toggle').addEventListener('click', () => {
+          currentLanguage = currentLanguage === 'en' ? 'sec' : 'en';
+          localStorage.setItem('invite-language', currentLanguage);
+          renderAll();
+        });
+
+        loadConfig().catch(error => {
+          document.getElementById('preloader').classList.add('is-hidden');
+          console.error(error);
+        });
+      })();
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
